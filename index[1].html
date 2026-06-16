@@ -1,0 +1,832 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Emunah Manor Apartments & Townhomes | Wilkes-Barre, PA</title>
+<meta name="description" content="Spacious 1–4 bedroom apartments and townhomes for rent at Emunah Manor, 272 Coal St, Wilkes-Barre PA. Utilities included, yard & patio, free parking. Limited-time move-in special.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --blue:#1a6fc4;
+    --blue-deep:#0f4f94;
+    --blue-bright:#2389e8;
+    --blue-light:#5aaff5;
+    --sky:#e0f0ff;
+    --sky2:#c7e4fd;
+    --paper:#ffffff;
+    --ink:#0d1f35;
+    --slate:#4a6280;
+    --line:rgba(26,111,196,0.13);
+    --line-light:rgba(255,255,255,0.2);
+    --gold:#f5a623;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:'Montserrat', -apple-system, Helvetica, sans-serif;
+    background:var(--paper); color:var(--ink); line-height:1.65; font-size:16px;
+  }
+  h1,h2,h3{font-family:'Playfair Display', Georgia, serif; font-weight:700;}
+  a{color:inherit; text-decoration:none;}
+  img{display:block; max-width:100%;}
+
+  .eyebrow{
+    font-size:0.72rem; font-weight:800; letter-spacing:.32em; text-transform:uppercase;
+    color:var(--blue-bright); margin-bottom:16px;
+  }
+
+  /* ===== BANNER ===== */
+  .banner{
+    background:linear-gradient(90deg, var(--blue-deep) 0%, var(--blue-bright) 100%);
+    color:#fff; text-align:center; padding:12px 20px;
+    font-size:0.78rem; font-weight:700; letter-spacing:.12em; text-transform:uppercase;
+  }
+  .banner a{color:var(--gold); text-decoration:underline;}
+
+  /* ===== HEADER ===== */
+  header{
+    position:sticky; top:0; z-index:100;
+    background:rgba(255,255,255,0.97);
+    backdrop-filter:blur(10px);
+    border-bottom:2px solid var(--sky2);
+    box-shadow:0 2px 20px rgba(26,111,196,0.08);
+  }
+  .nav{
+    max-width:1280px; margin:0 auto; padding:16px 36px;
+    display:flex; align-items:center; justify-content:space-between; gap:24px;
+  }
+  .brand{display:flex; align-items:center; gap:14px; text-decoration:none;}
+  .brand img{width:40px; height:40px;}
+  .brand-text{
+    font-family:'Playfair Display',serif; font-weight:800;
+    font-size:1.35rem; color:var(--blue-deep); letter-spacing:.02em; line-height:1.1;
+  }
+  .brand-sub{
+    font-family:'Montserrat',sans-serif; font-size:0.7rem; font-weight:600;
+    color:var(--slate); letter-spacing:.18em; text-transform:uppercase; display:block;
+  }
+  .nav-links{
+    display:flex; gap:36px;
+    font-size:0.82rem; font-weight:700; letter-spacing:.1em; text-transform:uppercase;
+  }
+  .nav-links a{color:var(--slate); transition:color .2s;}
+  .nav-links a:hover{color:var(--blue);}
+  .nav-call{
+    background:var(--blue); color:#fff;
+    font-size:0.82rem; font-weight:800; letter-spacing:.1em; text-transform:uppercase;
+    padding:13px 26px; border-radius:4px; white-space:nowrap;
+    transition:background .2s; box-shadow:0 4px 14px rgba(26,111,196,0.3);
+  }
+  .nav-call:hover{background:var(--blue-deep);}
+
+  /* ===== HERO ===== */
+  .hero{
+    position:relative; min-height:90vh;
+    display:flex; align-items:flex-end; color:#fff; overflow:hidden;
+  }
+  .hero-bg{
+    position:absolute; inset:0;
+    background:
+      linear-gradient(180deg,rgba(10,30,60,0.18) 0%,rgba(10,30,60,0.82) 80%),
+      url('https://images1.apartments.com/i2/qCMutEXaw_MLiC5Z5It6ZMPuYZv8SJF4BpS_aIh5F7A/111/emunah-manor-apartments-wilkes-barre-pa-townhouse-living-roomdining-roomkitchen-.jpg') center/cover no-repeat;
+  }
+  .hero-content{
+    position:relative; max-width:1280px; margin:0 auto;
+    padding:0 36px 100px; width:100%;
+    display:grid; grid-template-columns:1fr 380px; gap:48px; align-items:flex-end;
+  }
+  .hero-left .eyebrow{color:var(--blue-light); font-size:0.8rem;}
+  .hero h1{
+    font-size:clamp(2.8rem,5.5vw,4.8rem); line-height:1.06; font-weight:800;
+    margin-bottom:22px; text-shadow:0 2px 20px rgba(0,0,0,0.3);
+  }
+  .hero h1 span{color:var(--blue-light);}
+  .hero p.lead{
+    font-size:1.08rem; max-width:560px; color:rgba(255,255,255,0.88);
+    margin-bottom:36px; font-weight:400; line-height:1.7;
+  }
+  .hero-ctas{display:flex; gap:16px; flex-wrap:wrap;}
+  .btn{
+    font-family:'Montserrat',sans-serif;
+    font-size:0.8rem; font-weight:800; letter-spacing:.14em; text-transform:uppercase;
+    padding:16px 32px; border-radius:4px; display:inline-flex; align-items:center; gap:10px;
+    cursor:pointer; border:none; transition:all .25s;
+  }
+  .btn-white{background:#fff; color:var(--blue-deep);}
+  .btn-white:hover{background:var(--sky); transform:translateY(-2px);}
+  .btn-outline-white{border:2px solid rgba(255,255,255,0.7); color:#fff; background:transparent;}
+  .btn-outline-white:hover{background:rgba(255,255,255,0.15); border-color:#fff; transform:translateY(-2px);}
+  .btn-blue{background:var(--blue); color:#fff; box-shadow:0 4px 16px rgba(26,111,196,0.35);}
+  .btn-blue:hover{background:var(--blue-deep); transform:translateY(-2px);}
+  .btn-outline-blue{border:2px solid var(--blue); color:var(--blue); background:transparent;}
+  .btn-outline-blue:hover{background:var(--blue); color:#fff;}
+
+  /* hero inquiry card */
+  .hero-card{
+    background:rgba(255,255,255,0.97); color:var(--ink); border-radius:12px;
+    padding:32px; box-shadow:0 24px 60px rgba(0,0,0,0.3);
+    align-self:flex-end;
+  }
+  .hero-card h3{font-size:1.35rem; margin-bottom:6px; color:var(--blue-deep);}
+  .hero-card p{font-size:0.85rem; color:var(--slate); margin-bottom:20px;}
+  .card-price{
+    background:var(--sky); border-radius:8px; padding:16px 20px;
+    margin-bottom:20px; display:flex; justify-content:space-between; align-items:center;
+  }
+  .card-price .label{font-size:0.75rem; font-weight:700; color:var(--slate); text-transform:uppercase; letter-spacing:.08em;}
+  .card-price .amount{font-family:'Playfair Display',serif; font-size:2rem; font-weight:800; color:var(--blue-deep);}
+  .card-price .mo{font-size:0.8rem; color:var(--slate);}
+  .card-units{
+    font-size:0.8rem; color:var(--slate); margin-bottom:20px;
+    padding-bottom:16px; border-bottom:1px solid var(--line);
+  }
+  .card-units strong{color:var(--blue); font-size:0.95rem;}
+  .card-special{
+    background:linear-gradient(135deg,var(--blue-deep),var(--blue-bright));
+    color:#fff; border-radius:8px; padding:14px 16px; margin-bottom:20px; font-size:0.8rem; font-weight:600;
+  }
+  .card-special .title{font-size:0.72rem; letter-spacing:.14em; text-transform:uppercase; opacity:.8; margin-bottom:4px;}
+  .card-cta{width:100%; justify-content:center; font-size:0.82rem;}
+
+  /* ===== STATS BAR ===== */
+  .stats-bar{
+    background:var(--blue-deep); color:#fff;
+    display:flex; justify-content:center; flex-wrap:wrap;
+  }
+  .stat{
+    flex:1; min-width:180px; padding:32px 24px; text-align:center;
+    border-right:1px solid var(--line-light);
+  }
+  .stat:last-child{border-right:none;}
+  .stat .num{font-family:'Playfair Display',serif; font-size:2.4rem; font-weight:800; color:var(--blue-light);}
+  .stat .label{font-size:0.72rem; font-weight:700; text-transform:uppercase; letter-spacing:.14em; opacity:.8; margin-top:4px;}
+
+  /* ===== SECTIONS ===== */
+  section{padding:100px 36px;}
+  .wrap{max-width:1280px; margin:0 auto;}
+  .section-head{max-width:680px; margin-bottom:60px;}
+  .section-head h2{font-size:clamp(2rem,3.8vw,3rem); margin-bottom:16px; line-height:1.2;}
+  .section-head p{color:var(--slate); font-size:1.02rem; line-height:1.7;}
+  .center{text-align:center; margin-left:auto; margin-right:auto;}
+
+  /* ===== AVAILABILITY ===== */
+  .avail-section{background:var(--sky);}
+  .units-grid{display:grid; grid-template-columns:repeat(4,1fr); gap:20px;}
+  .unit-card{
+    background:#fff; border-radius:10px; padding:32px 24px;
+    border:2px solid transparent; transition:all .25s;
+    box-shadow:0 4px 20px rgba(26,111,196,0.08);
+    position:relative; cursor:pointer;
+  }
+  .unit-card:hover{border-color:var(--blue); transform:translateY(-4px); box-shadow:0 12px 40px rgba(26,111,196,0.18);}
+  .unit-card.featured{border-color:var(--blue); box-shadow:0 8px 32px rgba(26,111,196,0.2);}
+  .unit-badge{
+    position:absolute; top:-12px; left:50%; transform:translateX(-50%);
+    background:linear-gradient(90deg,var(--blue),var(--blue-bright));
+    color:#fff; font-size:0.65rem; font-weight:800; letter-spacing:.16em;
+    text-transform:uppercase; padding:5px 14px; border-radius:20px; white-space:nowrap;
+  }
+  .unit-icon{
+    width:48px; height:48px; background:var(--sky); border-radius:10px;
+    display:flex; align-items:center; justify-content:center; margin-bottom:18px;
+    color:var(--blue);
+  }
+  .unit-card h3{font-size:1.25rem; margin-bottom:6px; color:var(--blue-deep);}
+  .unit-price{font-family:'Playfair Display',serif; font-size:1.8rem; font-weight:800; color:var(--blue); margin:8px 0;}
+  .unit-price span{font-family:'Montserrat',sans-serif; font-size:0.8rem; color:var(--slate); font-weight:500;}
+  .unit-detail{font-size:0.82rem; color:var(--slate); margin-bottom:20px;}
+  .unit-avail{
+    font-size:0.75rem; font-weight:700; text-transform:uppercase; letter-spacing:.1em;
+    padding:6px 12px; border-radius:20px; display:inline-block; margin-bottom:20px;
+  }
+  .avail-yes{background:#e0f5e9; color:#1a7a3c;}
+  .avail-soon{background:#fff3e0; color:#c67a00;}
+  .unit-inquire{
+    width:100%; padding:12px; background:var(--sky); color:var(--blue-deep);
+    font-family:'Montserrat',sans-serif; font-size:0.78rem; font-weight:800;
+    letter-spacing:.1em; text-transform:uppercase; border:none; border-radius:6px;
+    cursor:pointer; transition:all .2s;
+  }
+  .unit-inquire:hover{background:var(--blue); color:#fff;}
+
+  /* inquire modal */
+  .modal-overlay{
+    display:none; position:fixed; inset:0; z-index:500;
+    background:rgba(10,30,60,0.7); backdrop-filter:blur(4px);
+    align-items:center; justify-content:center; padding:20px;
+  }
+  .modal-overlay.open{display:flex;}
+  .modal{
+    background:#fff; border-radius:16px; padding:40px; max-width:520px; width:100%;
+    box-shadow:0 40px 80px rgba(0,0,0,0.3); position:relative;
+  }
+  .modal-close{
+    position:absolute; top:16px; right:16px; background:var(--sky); border:none;
+    width:34px; height:34px; border-radius:50%; cursor:pointer; font-size:1.1rem;
+    color:var(--slate); display:flex; align-items:center; justify-content:center;
+    transition:background .2s;
+  }
+  .modal-close:hover{background:var(--sky2);}
+  .modal h3{font-size:1.6rem; color:var(--blue-deep); margin-bottom:6px;}
+  .modal .sub{font-size:0.88rem; color:var(--slate); margin-bottom:24px;}
+  .form-group{margin-bottom:16px;}
+  .form-group label{display:block; font-size:0.78rem; font-weight:700; text-transform:uppercase; letter-spacing:.1em; color:var(--slate); margin-bottom:6px;}
+  .form-group input, .form-group select, .form-group textarea{
+    width:100%; padding:13px 16px; border:2px solid var(--line);
+    border-radius:6px; font-family:'Montserrat',sans-serif; font-size:0.92rem;
+    color:var(--ink); background:#fff; transition:border-color .2s; outline:none;
+  }
+  .form-group input:focus, .form-group select:focus, .form-group textarea:focus{border-color:var(--blue);}
+  .form-row{display:grid; grid-template-columns:1fr 1fr; gap:14px;}
+  .form-submit{
+    width:100%; padding:16px; background:var(--blue); color:#fff;
+    font-family:'Montserrat',sans-serif; font-size:0.85rem; font-weight:800;
+    letter-spacing:.12em; text-transform:uppercase; border:none; border-radius:6px;
+    cursor:pointer; margin-top:8px; transition:background .2s;
+  }
+  .form-submit:hover{background:var(--blue-deep);}
+  .form-note{font-size:0.75rem; color:var(--slate); margin-top:12px; text-align:center;}
+  .success-msg{
+    display:none; text-align:center; padding:20px 0;
+  }
+  .success-msg .check{
+    width:60px; height:60px; background:#e0f5e9; border-radius:50%;
+    display:flex; align-items:center; justify-content:center;
+    margin:0 auto 16px; font-size:1.6rem;
+  }
+  .success-msg h4{font-size:1.4rem; color:var(--blue-deep); margin-bottom:8px;}
+  .success-msg p{font-size:0.9rem; color:var(--slate);}
+
+  /* ===== FLOOR PLAN ===== */
+  .plan-grid{display:grid; grid-template-columns:1fr 1fr; gap:80px; align-items:center;}
+  .plan-img-wrap{position:relative;}
+  .plan-img-wrap img{width:100%; border-radius:10px; box-shadow:0 20px 60px rgba(26,111,196,0.18);}
+  .plan-badge{
+    position:absolute; bottom:-18px; right:-18px;
+    background:linear-gradient(135deg,var(--blue-deep),var(--blue-bright));
+    color:#fff; border-radius:10px; padding:20px 24px;
+    box-shadow:0 12px 30px rgba(26,111,196,0.35);
+    text-align:center;
+  }
+  .plan-badge .big{font-family:'Playfair Display',serif; font-size:2rem; font-weight:800;}
+  .plan-badge .sm{font-size:0.72rem; font-weight:700; text-transform:uppercase; letter-spacing:.12em; opacity:.85;}
+  .plan-price{
+    font-family:'Playfair Display',serif; font-size:3.2rem; font-weight:800;
+    color:var(--blue); margin:8px 0 28px; line-height:1;
+  }
+  .plan-price span{font-family:'Montserrat',sans-serif; font-size:1rem; color:var(--slate); font-weight:500;}
+  .plan-meta{display:flex; gap:0; border:2px solid var(--line); border-radius:10px; overflow:hidden; margin:28px 0;}
+  .plan-meta div{flex:1; padding:20px 16px; text-align:center; border-right:1px solid var(--line);}
+  .plan-meta div:last-child{border-right:none;}
+  .plan-meta .v{font-family:'Playfair Display',serif; font-weight:800; font-size:1.5rem; color:var(--blue-deep);}
+  .plan-meta .k{font-size:0.68rem; font-weight:700; text-transform:uppercase; letter-spacing:.1em; color:var(--slate); margin-top:4px;}
+  .feature-list li{
+    list-style:none; display:flex; gap:14px; align-items:flex-start;
+    padding:13px 0; border-bottom:1px solid var(--line); font-size:0.93rem;
+  }
+  .feature-list li:last-child{border-bottom:none;}
+  .feature-list svg{flex:none; margin-top:2px; color:var(--blue);}
+
+  /* ===== GALLERY ===== */
+  .gallery-section{background:var(--sky);}
+  .gallery-grid{display:grid; grid-template-columns:repeat(4,1fr); gap:16px;}
+  .gallery-grid a{display:block; overflow:hidden; border-radius:10px;}
+  .gallery-grid a:nth-child(1){grid-column:1/3; grid-row:1/3;}
+  .gallery-grid a img{width:100%; height:100%; object-fit:cover; transition:transform .6s ease;}
+  .gallery-grid a:nth-child(1) img{aspect-ratio:1/1;}
+  .gallery-grid a:not(:nth-child(1)) img{aspect-ratio:1/1;}
+  .gallery-grid a:hover img{transform:scale(1.06);}
+
+  /* ===== AMENITIES ===== */
+  .amen-grid{display:grid; grid-template-columns:repeat(4,1fr); gap:20px;}
+  .amen-card{
+    background:var(--sky); border-radius:10px; padding:32px 24px;
+    transition:all .25s; border:2px solid transparent;
+  }
+  .amen-card:hover{border-color:var(--blue-light); transform:translateY(-4px); background:#fff; box-shadow:0 10px 40px rgba(26,111,196,0.12);}
+  .amen-card svg{margin-bottom:16px; color:var(--blue);}
+  .amen-card h4{font-family:'Playfair Display',serif; font-size:1.1rem; margin-bottom:8px; color:var(--blue-deep);}
+  .amen-card p{font-size:0.86rem; color:var(--slate); line-height:1.6;}
+
+  /* ===== NEIGHBORHOOD ===== */
+  .neigh-section{background:var(--blue-deep); color:#fff;}
+  .neigh-section .eyebrow{color:var(--blue-light);}
+  .neigh-section .section-head p{color:rgba(255,255,255,0.7);}
+  .neigh-grid{display:grid; grid-template-columns:1fr 1fr; gap:64px; align-items:start;}
+  .neigh-cols{display:grid; grid-template-columns:1fr 1fr; gap:32px;}
+  .neigh-col h4{
+    font-family:'Montserrat',sans-serif; font-size:0.72rem; font-weight:800;
+    letter-spacing:.2em; text-transform:uppercase; color:var(--blue-light);
+    margin-bottom:14px; padding-bottom:10px; border-bottom:1px solid var(--line-light);
+  }
+  .neigh-list li{
+    list-style:none; padding:11px 0; border-bottom:1px solid rgba(255,255,255,0.08);
+    font-size:0.9rem; display:flex; justify-content:space-between; align-items:center;
+  }
+  .neigh-list li:last-child{border-bottom:none;}
+  .neigh-list li .dist{
+    font-size:0.75rem; font-weight:700; color:var(--blue-light);
+    background:rgba(90,175,245,0.15); padding:3px 10px; border-radius:20px;
+  }
+  .neigh-map-frame{border-radius:12px; overflow:hidden; height:480px;}
+  .neigh-map-frame iframe{width:100%; height:100%; border:0;}
+
+  /* ===== SPECIAL CTA ===== */
+  .special-section{
+    background:linear-gradient(135deg, var(--blue-deep) 0%, var(--blue-bright) 100%);
+    color:#fff; text-align:center;
+  }
+  .special-section h2{font-size:clamp(2rem,4vw,3.2rem); margin-bottom:20px;}
+  .special-section p{color:rgba(255,255,255,0.85); max-width:620px; margin:0 auto 16px; font-size:1.02rem; line-height:1.7;}
+  .special-pills{
+    display:flex; justify-content:center; gap:16px; flex-wrap:wrap; margin:32px 0 44px;
+  }
+  .pill{
+    background:rgba(255,255,255,0.15); border:1px solid rgba(255,255,255,0.3);
+    border-radius:50px; padding:12px 24px; font-size:0.85rem; font-weight:700;
+    display:flex; align-items:center; gap:8px;
+  }
+  .special-ctas{display:flex; gap:16px; justify-content:center; flex-wrap:wrap; margin-bottom:60px;}
+  .contact-cards{
+    display:flex; justify-content:center; gap:40px; flex-wrap:wrap;
+    border-top:1px solid var(--line-light); padding-top:48px;
+  }
+  .contact-card{text-align:center;}
+  .contact-card .k{font-size:0.7rem; font-weight:800; text-transform:uppercase; letter-spacing:.2em; color:rgba(255,255,255,0.6); margin-bottom:8px;}
+  .contact-card .v{font-family:'Playfair Display',serif; font-size:1.25rem; font-weight:700;}
+  .contact-card .v a{color:#fff;}
+
+  /* ===== FOOTER ===== */
+  footer{background:var(--ink); color:rgba(255,255,255,0.5); text-align:center; padding:48px 36px; font-size:0.82rem;}
+  .foot-brand{display:flex; align-items:center; justify-content:center; gap:12px; margin-bottom:16px;}
+  .foot-brand img{width:28px; height:28px;}
+  .foot-brand span{font-family:'Playfair Display',serif; font-size:1.2rem; color:#fff;}
+  .foot-links{display:flex; justify-content:center; gap:32px; margin-bottom:20px; flex-wrap:wrap;}
+  .foot-links a{color:rgba(255,255,255,0.6); font-size:0.8rem; font-weight:600; transition:color .2s;}
+  .foot-links a:hover{color:#fff;}
+  .owner{margin-top:20px; padding-top:20px; border-top:1px solid rgba(255,255,255,0.1); font-size:0.76rem; color:rgba(255,255,255,0.35); letter-spacing:.05em;}
+
+  /* ===== RESPONSIVE ===== */
+  @media(max-width:1024px){
+    .hero-content{grid-template-columns:1fr; padding-bottom:60px;}
+    .hero-card{display:none;}
+    .units-grid{grid-template-columns:repeat(2,1fr);}
+    .plan-grid, .neigh-grid{grid-template-columns:1fr; gap:48px;}
+    .amen-grid{grid-template-columns:repeat(2,1fr);}
+    .neigh-cols{grid-template-columns:1fr;}
+  }
+  @media(max-width:768px){
+    .nav-links{display:none;}
+    section{padding:72px 20px;}
+    .gallery-grid{grid-template-columns:repeat(2,1fr);}
+    .gallery-grid a:nth-child(1){grid-column:1/3; grid-row:1/2;}
+    .units-grid{grid-template-columns:1fr;}
+    .stats-bar{flex-direction:column;}
+    .stat{border-right:none; border-bottom:1px solid var(--line-light); padding:22px;}
+    .form-row{grid-template-columns:1fr;}
+    .contact-cards{gap:24px;}
+  }
+</style>
+</head>
+<body>
+
+<!-- INQUIRY MODAL -->
+<div class="modal-overlay" id="inquireModal">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal()">✕</button>
+    <div id="modalForm">
+      <h3>Inquire About a Unit</h3>
+      <p class="sub">We'll get back to you within one business day.</p>
+      <div class="form-row">
+        <div class="form-group">
+          <label>First Name</label>
+          <input type="text" id="fname" placeholder="Jane" required>
+        </div>
+        <div class="form-group">
+          <label>Last Name</label>
+          <input type="text" id="lname" placeholder="Smith" required>
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Email Address</label>
+        <input type="email" id="email" placeholder="jane@email.com" required>
+      </div>
+      <div class="form-group">
+        <label>Phone Number</label>
+        <input type="tel" id="phone" placeholder="(570) 000-0000">
+      </div>
+      <div class="form-group">
+        <label>Unit Interest</label>
+        <select id="unit">
+          <option value="">Select a unit type...</option>
+          <option value="1BR">1-Bedroom Apartment</option>
+          <option value="2BR">2-Bedroom Apartment</option>
+          <option value="3BR Townhome" selected>3-Bedroom Townhome (Move-In Special!)</option>
+          <option value="4BR">4-Bedroom Unit</option>
+          <option value="Not Sure">Not Sure Yet</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Message (optional)</label>
+        <textarea id="message" rows="3" placeholder="When are you looking to move? Any questions?"></textarea>
+      </div>
+      <button class="form-submit" onclick="submitInquiry()">Send Inquiry</button>
+      <p class="form-note">Your information is sent directly to our leasing team at Radiant Property Management.</p>
+    </div>
+    <div class="success-msg" id="successMsg">
+      <div class="check">✓</div>
+      <h4>Inquiry Sent!</h4>
+      <p>Thank you! Our leasing team will be in touch within one business day. You can also reach us directly at <strong>(570) 822-3276</strong>.</p>
+    </div>
+  </div>
+</div>
+
+<!-- BANNER -->
+<div class="banner">
+  🏠 LIMITED-TIME SPECIAL: $99 DEPOSIT + 50% OFF FIRST MONTH + FREE APPLICATION ON 3BR TOWNHOMES &nbsp;<a href="#special">Get Details →</a>
+</div>
+
+<!-- HEADER -->
+<header>
+  <div class="nav">
+    <a href="#" class="brand">
+      <img src="logo.png" alt="Emunah Manor">
+      <div>
+        <span class="brand-text">Emunah Manor</span>
+        <span class="brand-sub">Apartments & Townhomes · Wilkes-Barre, PA</span>
+      </div>
+    </a>
+    <nav class="nav-links">
+      <a href="#availability">Availability</a>
+      <a href="#townhome">Townhomes</a>
+      <a href="#amenities">Amenities</a>
+      <a href="#neighborhood">Neighborhood</a>
+    </nav>
+    <a href="tel:5708223276" class="nav-call">📞 (570) 822-3276</a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" style="padding:0;">
+  <div class="hero-bg"></div>
+  <div class="hero-content">
+    <div class="hero-left">
+      <div class="eyebrow">272 Coal St · Wilkes-Barre, Pennsylvania 18702</div>
+      <h1>Spacious homes for<br><span>every stage of life.</span></h1>
+      <p class="lead">Emunah Manor offers 1–4 bedroom apartments and townhomes with utilities included, private yards, free parking, and a community built for families. Right now we have <strong style="color:#fff;">large availability</strong> on our 3-bedroom townhomes — with an incredible move-in special.</p>
+      <div class="hero-ctas">
+        <button class="btn btn-white" onclick="openModal('3BR Townhome')">Check Availability</button>
+        <a href="#availability" class="btn btn-outline-white">View All Units</a>
+      </div>
+    </div>
+    <div class="hero-card">
+      <h3>3BR Townhome Special</h3>
+      <p>Large availability — move in within 30 days!</p>
+      <div class="card-price">
+        <div><div class="label">Starting at</div><div class="amount">$1,699</div></div>
+        <div class="mo">/mo</div>
+      </div>
+      <div class="card-units"><strong>Multiple units available now</strong> — some ready immediately, more available July 1.</div>
+      <div class="card-special">
+        <div class="title">Limited-Time Offer</div>
+        $99 Security Deposit · 50% Off 1st Month · Free Application
+      </div>
+      <button class="btn btn-blue card-cta" onclick="openModal('3BR Townhome')">Inquire Now →</button>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<div class="stats-bar">
+  <div class="stat"><div class="num">1–4</div><div class="label">Bedroom Options</div></div>
+  <div class="stat"><div class="num">$99</div><div class="label">Move-In Deposit Special</div></div>
+  <div class="stat"><div class="num">950 sf</div><div class="label">3BR Townhome Size</div></div>
+  <div class="stat"><div class="num">Incl.</div><div class="label">All Utilities</div></div>
+  <div class="stat"><div class="num">Free</div><div class="label">Parking On-Site</div></div>
+</div>
+
+<!-- AVAILABILITY -->
+<section class="avail-section" id="availability">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Current Availability</div>
+      <h2>Find the right home for you</h2>
+      <p>From cozy 1-bedroom apartments to spacious 4-bedroom townhomes, Emunah Manor has something for everyone. We currently have <strong>large availability on 3-bedroom townhomes</strong> — perfect for families ready to spread out.</p>
+    </div>
+    <div class="units-grid">
+      <div class="unit-card">
+        <div class="unit-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        </div>
+        <h3>1-Bedroom</h3>
+        <div class="unit-price">Contact <span>for pricing</span></div>
+        <div class="unit-detail">1 Bed · 1 Bath · Apartment</div>
+        <span class="unit-avail avail-yes">Available</span>
+        <button class="unit-inquire" onclick="openModal('1BR')">Inquire About This Unit</button>
+      </div>
+      <div class="unit-card">
+        <div class="unit-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        </div>
+        <h3>2-Bedroom</h3>
+        <div class="unit-price">Contact <span>for pricing</span></div>
+        <div class="unit-detail">2 Bed · 1 Bath · Apartment</div>
+        <span class="unit-avail avail-yes">Available</span>
+        <button class="unit-inquire" onclick="openModal('2BR')">Inquire About This Unit</button>
+      </div>
+      <div class="unit-card featured">
+        <div class="unit-badge">⭐ Most Popular + Special Offer</div>
+        <div class="unit-icon" style="background:var(--blue); color:#fff;">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        </div>
+        <h3>3-Bedroom Townhome</h3>
+        <div class="unit-price">$1,699 <span>/mo</span></div>
+        <div class="unit-detail">3 Bed · 1 Bath · 950 sq ft · Private Yard</div>
+        <span class="unit-avail avail-yes">Large Availability Now</span>
+        <button class="unit-inquire" style="background:var(--blue); color:#fff;" onclick="openModal('3BR Townhome')">Inquire About This Unit</button>
+      </div>
+      <div class="unit-card">
+        <div class="unit-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        </div>
+        <h3>4-Bedroom</h3>
+        <div class="unit-price">$1,899 <span>/mo</span></div>
+        <div class="unit-detail">4 Bed · 1 Bath · 1,130 sq ft</div>
+        <span class="unit-avail avail-yes">Available Now</span>
+        <button class="unit-inquire" onclick="openModal('4BR')">Inquire About This Unit</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FLOOR PLAN -->
+<section id="townhome">
+  <div class="wrap">
+    <div class="plan-grid">
+      <div class="plan-img-wrap">
+        <img src="https://images1.apartments.com/i2/YzLMTShddpP0_g2B62LXsImjCJm_uvmC0Z6f4rKAN9E/116/emunah-manor-apartments-wilkes-barre-pa-townhouse-kitchen.jpg" alt="Townhouse kitchen at Emunah Manor">
+        <div class="plan-badge">
+          <div class="big">950</div>
+          <div class="sm">Square Feet</div>
+        </div>
+      </div>
+      <div>
+        <div class="eyebrow">Featured Residence</div>
+        <h2>The 3-Bedroom Townhome</h2>
+        <p style="color:var(--slate); margin-bottom:8px; line-height:1.7;">Our most popular unit — and we have <strong>large availability right now.</strong> Two full floors of living space with your own private yard and patio. Utilities included. Move-in special available for qualified applicants who apply same day as tour.</p>
+        <div class="plan-price">$1,699 <span>/ month</span></div>
+        <div class="plan-meta">
+          <div><div class="v">3 / 1</div><div class="k">Bed / Bath</div></div>
+          <div><div class="v">950 sf</div><div class="k">Size</div></div>
+          <div><div class="v">12 mo</div><div class="k">Lease</div></div>
+        </div>
+        <ul class="feature-list">
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg> Private fenced yard and patio</li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg> Gas, water, electric, trash &amp; sewer included</li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="1"/><path d="M3 9h18M9 21V9"/></svg> Stainless appliances &amp; vinyl flooring</li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> Washer/dryer hookup (stackable +$100/mo)</li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="7" cy="17" r="2"/><circle cx="17" cy="17" r="2"/><path d="M5 17H3V9l2-5h9l4 5h2v8h-2"/></svg> Free on-site parking included</li>
+        </ul>
+        <div style="display:flex; gap:14px; margin-top:36px; flex-wrap:wrap;">
+          <button class="btn btn-blue" onclick="openModal('3BR Townhome')">Apply for This Unit</button>
+          <a href="tel:5708223276" class="btn btn-outline-blue">Call to Schedule a Tour</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="gallery-section" id="gallery">
+  <div class="wrap">
+    <div class="section-head center">
+      <div class="eyebrow">Photo Gallery</div>
+      <h2>See it for yourself</h2>
+      <p>Bright kitchens, comfortable bedrooms, and a layout made for real life.</p>
+    </div>
+    <div class="gallery-grid">
+      <a href="#"><img src="https://images1.apartments.com/i2/qCMutEXaw_MLiC5Z5It6ZMPuYZv8SJF4BpS_aIh5F7A/111/emunah-manor-apartments-wilkes-barre-pa-townhouse-living-roomdining-roomkitchen-.jpg" alt="Living room, dining room and kitchen"></a>
+      <a href="#"><img src="https://images1.apartments.com/i2/bajy_vsEt1fb9twXIDXIGMRxbKm9k2fEws9yen7Fm60/111/emunah-manor-apartments-wilkes-barre-pa-townhouse-master-bedroom.jpg" alt="Master bedroom"></a>
+      <a href="#"><img src="https://images1.apartments.com/i2/9EbZPnRWcH9JSmJKsb361037rjEYTTJg5lQoqIDnXNQ/111/emunah-manor-apartments-wilkes-barre-pa-townhouse-kitchen.jpg" alt="Kitchen view 2"></a>
+      <a href="#"><img src="https://images1.apartments.com/i2/-tOJtB_XNW0Nu0KKUF6LHIidKt8XL2NOU3EBD5Yqb34/111/emunah-manor-apartments-wilkes-barre-pa-townhouse-kitchen.jpg" alt="Kitchen view 3"></a>
+    </div>
+  </div>
+</section>
+
+<!-- AMENITIES -->
+<section id="amenities">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Community Amenities</div>
+      <h2>Everything you need, included</h2>
+      <p>Emunah Manor takes the hassle out of renting — utilities, parking, security, and more are all part of the package.</p>
+    </div>
+    <div class="amen-grid">
+      <div class="amen-card">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+        <h4>All Utilities Included</h4>
+        <p>Gas, water, electric, trash and sewer — all covered in your monthly rent. No surprise bills.</p>
+      </div>
+      <div class="amen-card">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+        <h4>24/7 Security Cameras</h4>
+        <p>Round-the-clock security camera monitoring for a safe, secure community environment.</p>
+      </div>
+      <div class="amen-card">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+        <h4>24/7 Maintenance</h4>
+        <p>On-site maintenance available around the clock — we're here when something goes wrong.</p>
+      </div>
+      <div class="amen-card">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 22h20M4 22V8l8-6 8 6v14M9 22V14h6v8"/></svg>
+        <h4>Resident Playground</h4>
+        <p>A newly installed playground right on-site — great for families with young kids.</p>
+      </div>
+      <div class="amen-card">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="7" cy="17" r="2"/><circle cx="17" cy="17" r="2"/><path d="M5 17H3V9l2-5h9l4 5h2v8h-2"/></svg>
+        <h4>Free Parking</h4>
+        <p>On-site parking for residents — no extra fees, no permits, no stress.</p>
+      </div>
+      <div class="amen-card">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 10H3M7 6l-4 4 4 4M17 6l4 4-4 4"/></svg>
+        <h4>Laundry On-Site</h4>
+        <p>Shared laundry facility on the property, or add a stackable washer/dryer to your townhome (+$100/mo).</p>
+      </div>
+      <div class="amen-card">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        <h4>Private Yard &amp; Patio</h4>
+        <p>Townhome units come with your own fenced yard and patio — outdoor space you'll actually use.</p>
+      </div>
+      <div class="amen-card">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 2 9 2 12 0v-5"/></svg>
+        <h4>Near Two Colleges</h4>
+        <p>Minutes from Wilkes University and King's College — student-friendly leasing policies available.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NEIGHBORHOOD -->
+<section class="neigh-section" id="neighborhood">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">The Neighborhood</div>
+      <h2>Everything Wilkes-Barre has to offer</h2>
+      <p>Coal Street puts you in the middle of one of NEPA's most vibrant cities — walkable, convenient, and packed with great places to eat, shop, and explore.</p>
+    </div>
+    <div class="neigh-grid">
+      <div>
+        <div class="neigh-cols">
+          <div>
+            <h4>🎓 Education</h4>
+            <ul class="neigh-list">
+              <li><span>King's College</span><span class="dist">4 min</span></li>
+              <li><span>Wilkes University</span><span class="dist">4 min</span></li>
+              <li><span>Misericordia University</span><span class="dist">15 min</span></li>
+            </ul>
+            <h4 style="margin-top:24px;">🏥 Health &amp; Services</h4>
+            <ul class="neigh-list">
+              <li><span>Wilkes-Barre General Hospital</span><span class="dist">4 min</span></li>
+              <li><span>Geisinger Wyoming Valley</span><span class="dist">10 min</span></li>
+              <li><span>VA Medical Center</span><span class="dist">8 min</span></li>
+            </ul>
+            <h4 style="margin-top:24px;">✈️ Getting Around</h4>
+            <ul class="neigh-list">
+              <li><span>WB/Scranton Int'l Airport</span><span class="dist">20 min</span></li>
+              <li><span>I-81 &amp; I-476 Access</span><span class="dist">5 min</span></li>
+            </ul>
+          </div>
+          <div>
+            <h4>🍽️ Local Dining</h4>
+            <ul class="neigh-list">
+              <li><span>Bank + Vine</span><span class="dist">Farm-to-table</span></li>
+              <li><span>The Canning House</span><span class="dist">Charming bistro</span></li>
+              <li><span>The Down Pour</span><span class="dist">Eclectic bar</span></li>
+              <li><span>Flaming Crab</span><span class="dist">Seafood</span></li>
+              <li><span>El Rey Azteca</span><span class="dist">Mexican</span></li>
+              <li><span>Breaker Brewing Co.</span><span class="dist">Local craft beer</span></li>
+            </ul>
+            <h4 style="margin-top:24px;">🛍️ Shopping</h4>
+            <ul class="neigh-list">
+              <li><span>Wyoming Valley Mall</span><span class="dist">10 min</span></li>
+              <li><span>Boscov's Downtown</span><span class="dist">7 min</span></li>
+              <li><span>City Heights Shopping</span><span class="dist">8 min walk</span></li>
+              <li><span>Target / Walmart</span><span class="dist">8 min</span></li>
+            </ul>
+          </div>
+        </div>
+        <div style="margin-top:28px; background:rgba(255,255,255,0.08); border-radius:10px; padding:20px 24px;">
+          <p style="font-size:0.88rem; color:rgba(255,255,255,0.75); line-height:1.7;">
+            🎭 <strong style="color:#fff;">Things to do nearby:</strong> Catch a show at the F.M. Kirby Center, walk the River Common along the Susquehanna, explore Public Square, cheer on the WB/Scranton Penguins, or hike Seven Tubs Recreation Area — all within easy reach of Coal Street.
+          </p>
+        </div>
+      </div>
+      <div class="neigh-map-frame">
+        <iframe src="https://www.google.com/maps?q=272+Coal+St,+Wilkes-Barre,+PA+18702&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="272 Coal St Wilkes-Barre PA"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SPECIAL / CONTACT -->
+<section class="special-section" id="special">
+  <div class="wrap">
+    <div class="eyebrow" style="color:rgba(255,255,255,0.7); text-align:center;">Limited-Time Move-In Special</div>
+    <h2>Move in within 30 days.<br>Save big from day one.</h2>
+    <p>Apply the same day as your tour or showing and qualify for our exclusive 3-bedroom townhome special. Subject to standard community screening requirements.</p>
+    <div class="special-pills">
+      <div class="pill">✅ Only $99 Security Deposit</div>
+      <div class="pill">✅ 50% Off First Month's Rent</div>
+      <div class="pill">✅ FREE Application Fee</div>
+    </div>
+    <div class="special-ctas">
+      <button class="btn btn-white" onclick="openModal('3BR Townhome')">Inquire &amp; Apply Now</button>
+      <a href="tel:5708223276" class="btn btn-outline-white">📞 Call (570) 822-3276</a>
+      <a href="mailto:aedmonds@radiantprop.com?cc=aherman@radiantprop.com&subject=Emunah Manor Inquiry" class="btn btn-outline-white">✉️ Email the Leasing Team</a>
+    </div>
+    <div class="contact-cards">
+      <div class="contact-card">
+        <div class="k">Address</div>
+        <div class="v">272 Coal St, Wilkes-Barre, PA 18702</div>
+      </div>
+      <div class="contact-card">
+        <div class="k">Phone</div>
+        <div class="v"><a href="tel:5708223276">(570) 822-3276</a></div>
+      </div>
+      <div class="contact-card">
+        <div class="k">Email</div>
+        <div class="v"><a href="mailto:aedmonds@radiantprop.com?cc=aherman@radiantprop.com&subject=Emunah Manor Inquiry">aedmonds@radiantprop.com</a></div>
+      </div>
+      <div class="contact-card">
+        <div class="k">Office Hours</div>
+        <div class="v">Mon, Tue, Thu, Fri · 9am–4pm</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="foot-brand">
+    <img src="logo.png" alt="Emunah Manor">
+    <span>Emunah Manor Apartments &amp; Townhomes</span>
+  </div>
+  <div class="foot-links">
+    <a href="#availability">Availability</a>
+    <a href="#townhome">3BR Townhome</a>
+    <a href="#amenities">Amenities</a>
+    <a href="#neighborhood">Neighborhood</a>
+    <a href="tel:5708223276">(570) 822-3276</a>
+  </div>
+  272 Coal St, Wilkes-Barre, PA 18702 &nbsp;·&nbsp; Equal Housing Opportunity<br>
+  Pricing, availability, and move-in specials are subject to change — please confirm with our leasing office.
+  <div class="owner">Owned &amp; Managed by Radiant Property Management · Iselin, NJ</div>
+</footer>
+
+<script>
+function openModal(unitType) {
+  document.getElementById('inquireModal').classList.add('open');
+  document.body.style.overflow = 'hidden';
+  if (unitType) {
+    const sel = document.getElementById('unit');
+    for (let i = 0; i < sel.options.length; i++) {
+      if (sel.options[i].value === unitType) { sel.selectedIndex = i; break; }
+    }
+  }
+  document.getElementById('modalForm').style.display = 'block';
+  document.getElementById('successMsg').style.display = 'none';
+}
+function closeModal() {
+  document.getElementById('inquireModal').classList.remove('open');
+  document.body.style.overflow = '';
+}
+document.getElementById('inquireModal').addEventListener('click', function(e){
+  if (e.target === this) closeModal();
+});
+function submitInquiry() {
+  const fname = document.getElementById('fname').value.trim();
+  const lname = document.getElementById('lname').value.trim();
+  const email = document.getElementById('email').value.trim();
+  const phone = document.getElementById('phone').value.trim();
+  const unit = document.getElementById('unit').value;
+  const message = document.getElementById('message').value.trim();
+  if (!fname || !email) { alert('Please enter your name and email address.'); return; }
+  const subject = encodeURIComponent('Emunah Manor Inquiry: ' + (unit || 'General'));
+  const body = encodeURIComponent(
+    'Name: ' + fname + ' ' + lname + '\n' +
+    'Email: ' + email + '\n' +
+    'Phone: ' + (phone || 'Not provided') + '\n' +
+    'Unit Interest: ' + (unit || 'Not specified') + '\n' +
+    'Message: ' + (message || 'No message provided') + '\n\n' +
+    '-- Submitted via emunahmanor.com'
+  );
+  // Opens mailto to both recipients
+  window.location.href = 'mailto:aedmonds@radiantprop.com?cc=aherman@radiantprop.com&subject=' + subject + '&body=' + body;
+  // Show success
+  document.getElementById('modalForm').style.display = 'none';
+  document.getElementById('successMsg').style.display = 'block';
+}
+</script>
+</body>
+</html>
